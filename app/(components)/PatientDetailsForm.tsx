@@ -81,16 +81,17 @@ const PatientDetailsForm = () => {
     }
   }
 
+  const modalPop = (e: React.FormEvent) => {
+    e.preventDefault();
+    onOpen()
+  }
 
   return (
     <div className='flex justify-center items-center'>
       <form
         className='bg-[#e1e8f1] rounded-lg'
         // onSubmit={handleSubmit}
-        onSubmit={(e: React.FormEvent) => {
-          e.preventDefault()
-          onOpen();
-        }}
+        onSubmit={modalPop}
         encType="multipart/form-data"
       >
         <div className='flex flex-col p-6 sm:p-10 gap-y-8'>
