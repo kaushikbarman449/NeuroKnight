@@ -5,6 +5,14 @@ import React, { useRef, useState } from 'react';
 import { EngineIcon } from "../assets/Engine";
 import { MailIcon } from '../assets/MailIcon';
 import { useRouter } from "next/navigation";
+import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
+import localFont from 'next/font/local'
+import { cn } from '../lib/utils'
+
+
+const fontScary = localFont({
+  src: '../assets/Scary.ttf',
+})
 
 const models = [
   {
@@ -34,6 +42,7 @@ const PatientDetailsForm = () => {
 
   const router = useRouter()
 
+  const { isOpen, onOpen, onOpenChange } = useDisclosure();
   const [loading, setLoading] = useState<boolean>(false);
   const [imageFile, setImageFile] = useState<string | File | null>();
 
@@ -72,11 +81,16 @@ const PatientDetailsForm = () => {
     }
   }
 
+
   return (
     <div className='flex justify-center items-center'>
       <form
         className='bg-[#e1e8f1] rounded-lg'
         // onSubmit={handleSubmit}
+        onSubmit={(e: React.FormEvent) => {
+          e.preventDefault()
+          onOpen();
+        }}
         encType="multipart/form-data"
       >
         <div className='flex flex-col p-6 sm:p-10 gap-y-8'>
@@ -141,6 +155,37 @@ const PatientDetailsForm = () => {
           </button>
         </div>
       </form>
+      <Modal
+        backdrop="opaque"
+        isOpen={isOpen}
+        onOpenChange={onOpenChange}
+        classNames={{
+          backdrop: "bg-gradient-to-t from-zinc-900 to-zinc-900/10 backdrop-opacity-20"
+        }}
+      >
+        <ModalContent>
+          {(onClose) => (
+            <>
+              <ModalHeader className={cn("flex flex-col gap-1 tracking-wider text-red-500", fontScary.className)}>
+                404! Our Fault
+              </ModalHeader>
+              <ModalBody>
+                <p>
+                  This won&apos;t work. Deploying these state-of-the-art models incurs costs beyond our current capabilities. Regrettably, the limitations of free deployment prevent us from offering this feature at the moment.
+                </p>
+                <p>
+                  Thank You!
+                </p>
+              </ModalBody>
+              <ModalFooter>
+                <Button color="danger" variant="light" onPress={onClose}>
+                  Close
+                </Button>
+              </ModalFooter>
+            </>
+          )}
+        </ModalContent>
+      </Modal>
     </div>
   )
 }
