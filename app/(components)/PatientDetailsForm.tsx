@@ -76,7 +76,7 @@ const PatientDetailsForm = () => {
     <div className='flex justify-center items-center'>
       <form
         className='bg-[#e1e8f1] rounded-lg'
-        onSubmit={handleSubmit}
+        // onSubmit={handleSubmit}
         encType="multipart/form-data"
       >
         <div className='flex flex-col p-6 sm:p-10 gap-y-8'>
