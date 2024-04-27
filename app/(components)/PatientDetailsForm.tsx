@@ -171,7 +171,7 @@ const PatientDetailsForm = () => {
               </ModalHeader>
               <ModalBody>
                 <p>
-                  This won&apos;t work. Deploying these state-of-the-art models incurs costs beyond our current capabilities. Regrettably, the limitations of free deployment prevent us from offering this feature at the moment.
+                  This won&apos;t work. Deploying these state-of-the-art models incurs costs beyond our current capabilities. Regrettably, the limitations of free deployment prevent us from offering this feature at the moment. However, integrating these models remains a priority, so stay tuned for updates!
                 </p>
                 <p>
                   Thank You!
