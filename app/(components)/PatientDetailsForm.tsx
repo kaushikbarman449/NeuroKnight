@@ -8,6 +8,7 @@ import { useRouter } from "next/navigation";
 import { Modal, ModalContent, ModalHeader, ModalBody, ModalFooter, Button, useDisclosure } from "@nextui-org/react";
 import localFont from 'next/font/local'
 import { cn } from '../lib/utils'
+import Link from "next/link";
 
 
 const fontScary = localFont({
@@ -16,8 +17,8 @@ const fontScary = localFont({
 
 const models = [
   {
-    label: "VGG-16",
-    value: "VGG16"
+    label: "VGG-19",
+    value: "VGG19"
   },
   {
     label: "Vision Transformers",
@@ -33,7 +34,7 @@ const models = [
   },
   {
     label: "GoogleNet",
-    value: "Inception"
+    value: "InceptionV3"
   }
 ]
 
@@ -73,11 +74,12 @@ const PatientDetailsForm = () => {
 
     try {
       const result = await axios.post("http://localhost:8000/patients", formData, { headers: { 'Content-Type': 'multipart/form-data' } })
+      console.log(result);
     } catch (error) {
       console.log(error);
     } finally {
       setLoading(false);
-      router.push(`/Hero/${patientName}`)
+      router.push(`/Hero`)
     }
   }
 
@@ -172,7 +174,7 @@ const PatientDetailsForm = () => {
               </ModalHeader>
               <ModalBody>
                 <p>
-                  This won&apos;t work. Deploying these state-of-the-art models incurs costs beyond our current capabilities. Regrettably, the limitations of free deployment prevent us from offering this feature at the moment. However, integrating these models remains a priority, so stay tuned for updates!
+                  This won&apos;t work. Deploying these state-of-the-art models incurs costs beyond our current capabilities. Regrettably, the limitations of free deployment prevent us from offering this feature at the moment. However, watch this 3-minute {" "} <Link href='/VideoPage' className='underline-offset-4 underline text-red-500'>Video Demo</Link>{" "} of the complete working of the website.
                 </p>
                 <p>
                   Thank You!

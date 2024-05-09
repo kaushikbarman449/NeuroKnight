@@ -31,8 +31,8 @@ const AboutModels = [
   },
   {
     id: 105,
-    title: "VGG-16",
-    about: "VGG16 is a deep CNN architecture consisting of 16 layers with 13 convolutional layers and 3 fully connected layers. VGG16 achieved strong performance on the ILSVRC in 2014 and is known for its straightforward design, making it easy to understand and implement. While newer architectures have surpassed VGG16 in terms of performance, it remains a popular choice for transfer learning and benchmarking in computer vision research."
+    title: "VGG-19",
+    about: "VGG19 is a deep convolutional neural network (CNN) architecture, an extension of the VGG16 model, with 19 layers. Its architecture comprises 16 convolutional layers and 3 fully connected layers, hence the name."
   }
 ]
 

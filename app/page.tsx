@@ -1,6 +1,5 @@
 import { Check } from "lucide-react";
 import Image from "next/image";
-import Footer from "./(components)/Footer";
 import MaxWidthWrapper from "./(components)/MaxWidthWrapper";
 import PatientDetailsForm from "./(components)/PatientDetailsForm";
 import Workflow from "./(components)/Workflow";
@@ -53,7 +52,6 @@ export default function Home() {
         </div>
       </MaxWidthWrapper>
       <Workflow />
-      <Footer />
     </>
   );
 }

@@ -8,7 +8,8 @@ const Navbar = () => {
       <div className='flex items-center'>
         <Link href='/' className='text-2xl mt-2'>NeuroKnightMRI</Link>
       </div>
-      <div className='flex items-center'>
+      <div className='flex items-center gap-x-8'>
+        <Link href="/VideoPage" className='underline-offset-4 hover:underline hidden sm:block'>Video Demo</Link>
         <a href="https://github.com/kaushikbarman449" target='_blank'>
           <IconGithub className='cursor-pointer' />
         </a>

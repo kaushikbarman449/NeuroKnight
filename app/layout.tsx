@@ -1,10 +1,10 @@
+import clsx from 'clsx';
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Recursive } from 'next/font/google';
+import Navbar from "./(components)/Navbar";
 import "./globals.css";
 import { Providers } from "./providers";
-import Navbar from "./(components)/Navbar";
-import clsx from 'clsx';
-import { Recursive } from 'next/font/google'
+import Footer from './(components)/Footer';
 
 const recursive = Recursive({ subsets: ['latin'] })
 
@@ -27,6 +27,7 @@ export default function RootLayout({
         <Providers>
           <Navbar />
           {children}
+          <Footer />
         </Providers>
       </body>
     </html>
