@@ -7,7 +7,7 @@ const YoutubePlayer = () => {
     <div className=''>
       <YouTube
         videoId='7DoplaBPnG0'
-        className='w-[300px] lg:w-[800px] md:w-[500px] aspect-video overflow-hidden rounded-xl' // defaults -> ''
+        className='w-[300px] lg:w-[799px] md:w-[500px] aspect-video overflow-hidden rounded-xl' // defaults -> ''
         iframeClassName='inset-0 w-full h-full'
         opts={{ autoplay: 0, controls: 0 }}
       />
