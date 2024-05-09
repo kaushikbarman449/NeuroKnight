@@ -22,7 +22,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className='bg-white'>
       <body className={clsx("bg-white antialiased text-[#111827] h-full", recursive.className)}>
         <Providers>
           <Navbar />
