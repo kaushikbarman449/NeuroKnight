@@ -17,7 +17,7 @@ const AboutModels = [
   {
     id: 102,
     title: "GoogleNet (Inception)",
-    about: "GoogleNet, also known as Inception, is a CNN architecture developed by Google researchers. It introduced the concept of &quot;inception modules,&quot; which are convolutional modules with multiple parallel convolutional operations at different spatial scales. GoogleNet won the ILSVRC in 2014 and demonstrated state-of-the-art performance on various computer vision tasks."
+    about: "GoogleNet, also known as Inception, is a CNN architecture developed by Google researchers. It introduced the concept of inception modules which are convolutional modules with multiple parallel convolutional operations at different spatial scales. GoogleNet won the ILSVRC in 2014 and demonstrated state-of-the-art performance on various computer vision tasks."
   },
   {
     id: 103,
